@@ -1,0 +1,61 @@
+<html>
+<body>
+    <head>
+       
+           <meta charset="UTF-8">
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Crypto</title>
+    <link rel="stylesheet" href="Home.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    </head>
+    <section class="background">
+    <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+       <a href="Home.html"><h1>Simply Crypto</h1></a>
+      </div>
+      <ul class="menu-list">
+           <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="Introduction.html">Introduction</a></li>
+        <li><a href="Course1.html">Learn</a></li>
+        <li><a href="CryptoNews.html">Crypto News</a></li>
+        <li><a href="Statistics.html">Statisitcs</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+        <div class="textbox">
+        <h1>Cryptocurrency: The Future of Finance</h1>
+            <p>Simplifying cryptocurrency in order to prepare the younger generation, Gen Z, for the future of finance.</p>
+            <a href="Introduction.html" class="button">Start Learning!</a>
+        </div>
+    </section>
+ 
+      <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+                 </body>
+</html>
